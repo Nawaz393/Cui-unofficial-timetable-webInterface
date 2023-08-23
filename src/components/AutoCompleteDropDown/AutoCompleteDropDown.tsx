@@ -13,7 +13,8 @@ export const AutoCompleteDropDown: React.FC<AutoCompleteDropDownProps> = ({
   return (
     <Autocomplete
       id='combo-box-demo'
-      onChange={async (e, value) => {
+      onChange={
+        async (e, value) => {
         e.preventDefault();
         if (value !== null) {
           OnClick(value);
