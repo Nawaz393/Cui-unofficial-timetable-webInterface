@@ -14,7 +14,7 @@ import { MyProvider } from './context';
 import About from './Pages/About/About';
 
 const App = () => {
-  axios.defaults.baseURL = 'https://timetablebackend-svi1.onrender.com/web';
+  axios.defaults.baseURL = import.meta.env.VITE_BASEURL;
   return (
     <MyProvider>
       <Routes>

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { LandingSkeleton, NotFound } from '../../components';
+import { LandingSkeleton } from '../../components';
 import { useMyContext } from '../../context';
 
 export const Landing = (): ReactNode => {

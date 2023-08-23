@@ -18,6 +18,7 @@ export const TimeTableTabs: React.FC<TimeTableTabsProps> = ({
   const [selectedtab, setSelectedTab] = useState<number>(0);
   
   const handletabChange = (event: ChangeEvent<{}>, value: number) => {
+    event.preventDefault();
     setSelectedTab(value);
   };
 
