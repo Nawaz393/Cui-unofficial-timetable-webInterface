@@ -1,28 +1,54 @@
-# React + TypeScript + Vite
+<h1 align="center">
+  CUI Unofficial Timetable
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  📚 A web application to manage and access class schedules at CUI.
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#demo">Demo</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#usage">Usage</a> •
+  <a href="#developer">Developer</a> •
+  <a href="#license">License</a>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Key Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+✨ View Teacher's Schedule\
+✨ View a Subject's Schedule\
+✨ View your class schedules\
+✨ Stay organized with weekly timetable\
+✨ Easy navigation between different days\
+✨ Responsive design for mobile and desktop
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Demo
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# Cui-unofficial-timetable-webInterface
+![Demo GIF](link-to-demo-gif)
+
+Check out the live demo [here](link-to-live-demo).
+
+## Usage
+
+🚀 Launch the application in your browser.
+
+🔍 Explore the different features to manage and access your class schedules at CUI.
+
+## Developer
+
+👨‍💻 This application is developed by **Mohammad Nawaz Khan**.
+
+🔗 GitHub: [@Nawaz393](https://github.com/Nawaz393)\
+📧 Email: [mohdnawaz6393@gmail.com](mailto:mohdnawaz6393@gmail.com)
+
+## License
+
+📄 This project is licensed under the open-source [Open Source](LICENSE).
+
+   
