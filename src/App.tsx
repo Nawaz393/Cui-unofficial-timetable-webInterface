@@ -32,6 +32,7 @@ const App = () => {
         />
 
         <Route path='/about' element={<Layout children={<About />} />} />
+
         <Route path='*' element={<Layout children={<Landing />} />} />
       </Routes>
     </MyProvider>
