@@ -18,6 +18,7 @@ export default function Navbar({ elements }: Props): ReactElement {
     <li
       className=' hover:scale-110 transition-all cursor-pointer mr-5'
       key={item.name}
+      onClick={toggleMenu}
     >
       <Link to={item.link}> {item.name}</Link>
     </li>
