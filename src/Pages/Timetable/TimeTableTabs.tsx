@@ -16,60 +16,49 @@ export const TimeTableTabs: React.FC<TimeTableTabsProps> = ({
   isLoading,
 }) => {
   const [selectedtab, setSelectedTab] = useState<number>(0);
-  
+
   const handletabChange = (event: ChangeEvent<{}>, value: number) => {
     event.preventDefault();
     setSelectedTab(value);
   };
 
- console.log(tabsData)
+  console.log(tabsData);
   return (
-
     <Box
-    
-    sx={{
-        width:"100%",
-    }}
-    >
-
-<Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-    <Tabs
-      value={selectedtab}
-      onChange={handletabChange}
-      indicatorColor='secondary'
-      textColor='inherit'
-      variant='fullWidth'
-      scrollButtons
-      allowScrollButtonsMobile
       sx={{
-        marginY: 1,
+        width: '100%',
       }}
     >
-     
-
-        {tabs?.map((tab, index) => (
-          <Tab
-            key={index}
-            label={!isSmall ? tab : tab.slice(0, 3)}
-          />
-        ))}
-
-
-  
-    </Tabs>
-    </Box>
-        <Container>
-      {tabsData?.length === 0 && !isLoading ? (
-        <NotFound />
-      ) : isLoading ? (
-        <ScheduleCardSekelton isSmall={isSmall} />
-      ) : (
-        <div className={`grid ${!isSmall ? 'grid-cols-2' : 'grid-cols-1'} ` }>
-          {tabsData[selectedtab]?.map((item: any, index: number) => (
-            <ScheduleCard key={index} cardData={item} />
+      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <Tabs
+          value={selectedtab}
+          onChange={handletabChange}
+          indicatorColor='secondary'
+          textColor='inherit'
+          variant={isSmall ? 'scrollable' : 'fullWidth'}
+          scrollButtons={true}
+          allowScrollButtonsMobile
+          sx={{
+            marginY: 1,
+          }}
+        >
+          {tabs?.map((tab, index) => (
+            <Tab key={index} label={!isSmall ? tab : tab.slice(0, 3)} />
           ))}
-        </div>
-      )}
+        </Tabs>
+      </Box>
+      <Container>
+        {tabsData?.length === 0 && !isLoading ? (
+          <NotFound />
+        ) : isLoading ? (
+          <ScheduleCardSekelton isSmall={isSmall} />
+        ) : (
+          <div className={`grid ${!isSmall ? 'grid-cols-2' : 'grid-cols-1'} `}>
+            {tabsData[selectedtab]?.map((item: any, index: number) => (
+              <ScheduleCard key={index} cardData={item} />
+            ))}
+          </div>
+        )}
       </Container>
     </Box>
   );

@@ -31,9 +31,9 @@ export const TimeTable = () => {
 
   return (
     <Container
-        sx={{
-            mb: 20,
-        }}
+      sx={{
+        mb: 20,
+      }}
     >
       <Typography
         sx={{
@@ -43,7 +43,7 @@ export const TimeTable = () => {
           color: '#00396b',
           fontFamily: ' "Dancing Script", cursive',
           text: 'center',
-    pt:1
+          pt: 1,
         }}
         variant='h1'
       >
@@ -56,7 +56,12 @@ export const TimeTable = () => {
         title='Class Names'
       />
 
-      <TimeTableTabs tabs={days} tabsData={timeTable} isSmall={isSmall} isLoading={isLoading} />
+      <TimeTableTabs
+        tabs={days}
+        tabsData={timeTable}
+        isSmall={isSmall}
+        isLoading={isLoading}
+      />
     </Container>
   );
 };

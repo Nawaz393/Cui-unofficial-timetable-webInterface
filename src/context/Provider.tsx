@@ -21,14 +21,15 @@ export const MyProvider: React.FC<ProviderProps> = ({ children }) => {
       setLoading(true);
       if (localStorage.getItem('dropdownData') === null) {
         const response = await usefetch('/');
-        const { teachers, subjects, classRooms, timeSlots } = response.data;
+        const { teachers, subjects, classRooms, timeSlots, classNames } =
+          response.data;
 
         localStorage.setItem('dropdownData', JSON.stringify(response.data));
         setTeachers(teachers);
         setSubjects(subjects);
         setClassRooms(classRooms);
         setTimeSlots(timeSlots);
-        setClassNames(classNames);
+        setClassNames(classNames); // Set classNames here
       } else {
         const { teachers, subjects, classRooms, timeSlots, classNames } =
           JSON.parse(localStorage.getItem('dropdownData')!);
@@ -36,7 +37,7 @@ export const MyProvider: React.FC<ProviderProps> = ({ children }) => {
         setSubjects(subjects);
         setClassRooms(classRooms);
         setTimeSlots(timeSlots);
-        setClassNames(classNames);
+        setClassNames(classNames); // Set classNames here
       }
       setLoading(false);
     })();
