@@ -40,10 +40,10 @@ export const Subjects = () => {
     <Container
       sx={{
         mb: 20,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'stretch',
+        display: 'Grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+        gap: 2,
+        
       }}
     >
       <Typography

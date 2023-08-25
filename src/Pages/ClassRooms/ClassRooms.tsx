@@ -78,10 +78,9 @@ export const ClassRooms = () => {
     <Container
       sx={{
         mb: 20,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'stretch',
+        display: 'Grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+        gap: 2,
       }}
     >
       <Typography
@@ -98,13 +97,13 @@ export const ClassRooms = () => {
       >
         ClassRoom
       </Typography>
-      <Container
-        sx={{
-          display: 'flex',
-          justifyContent: 'space-evenly',
-          justifyItems: 'center',
-        }}
-      >
+      <Container 
+      
+      
+      sx={{
+
+        display: 'flex',
+      }}>
         <AutoCompleteDropDown
           options={classRooms}
           OnClick={handleRoomChange}
