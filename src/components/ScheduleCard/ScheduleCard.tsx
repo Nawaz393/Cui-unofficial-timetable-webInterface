@@ -8,6 +8,8 @@ export const ScheduleCard: React.FC<{ cardData: ScheduleCardType }> = ({
   return (
     <Card
       sx={{
+        alignSelf:'stretch',
+        justifySelf:'stretch',
         maxWidth: 300,
         margin: '20px',
         backgroundColor: '#F0F0F0', // Brighter background color

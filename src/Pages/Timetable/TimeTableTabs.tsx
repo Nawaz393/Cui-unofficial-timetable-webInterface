@@ -53,7 +53,7 @@ export const TimeTableTabs: React.FC<TimeTableTabsProps> = ({
         ) : isLoading ? (
           <ScheduleCardSekelton isSmall={isSmall} />
         ) : (
-          <div className={`grid ${!isSmall ? 'grid-cols-2' : 'grid-cols-1'} `}>
+          <div className={`grid  ${!isSmall ? 'grid-cols-2' : 'grid-cols-1'} `}>
             {tabsData[selectedtab]?.map((item: any, index: number) => (
               <ScheduleCard key={index} cardData={item} />
             ))}

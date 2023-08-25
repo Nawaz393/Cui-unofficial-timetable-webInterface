@@ -40,6 +40,10 @@ export const Subjects = () => {
     <Container
       sx={{
         mb: 20,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'stretch',
       }}
     >
       <Typography

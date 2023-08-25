@@ -39,6 +39,15 @@ export const Teachers = () => {
     <Container
       sx={{
         mb: 20,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'stretch',
+      
+
+
+
+         
       }}
     >
       <Typography
@@ -66,7 +75,11 @@ export const Teachers = () => {
       ) : isLoading ? (
         <ScheduleCardSekelton isSmall={isSmall} />
       ) : (
-        <div className={`grid ${!isSmall ? 'grid-cols-2' : 'grid-cols-1'}`}>
+        <div 
+        
+       
+        
+        className={`grid   ${!isSmall ? 'grid-cols-2' : 'grid-cols-1'} `}>
           {cards}
         </div>
       )}
