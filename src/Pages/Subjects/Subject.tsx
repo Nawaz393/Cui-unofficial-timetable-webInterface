@@ -38,13 +38,15 @@ export const Subjects = () => {
 
   return (
     <Container
-      sx={{
-        mb: 20,
-        display: 'Grid',
+    sx={{
+      mb: 20,
+
+        display: isSmall ? 'block' : 'block',
         gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-        gap: 2,
-        
-      }}
+
+      gap: 2,
+ 
+    }}
     >
       <Typography
         sx={{
