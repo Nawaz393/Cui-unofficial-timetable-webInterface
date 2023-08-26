@@ -1,12 +1,10 @@
-import { Container, Typography, useMediaQuery } from '@mui/material';
+import { Container, useMediaQuery } from '@mui/material';
 import { useMyContext } from '../../context';
 import { useState } from 'react';
 import {
   AutoCompleteDropDown,
   LoadOnConditions,
-  NotFound,
   ScheduleCard,
-  ScheduleCardSekelton,
   Title,
 } from '../../components';
 import { fetchClassRoom } from './fetchClassRoom';

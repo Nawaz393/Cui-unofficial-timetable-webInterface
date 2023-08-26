@@ -2,9 +2,7 @@ import { Box, Container, Tab, Tabs } from '@mui/material';
 import { ChangeEvent, useState } from 'react';
 import {
   LoadOnConditions,
-  NotFound,
   ScheduleCard,
-  ScheduleCardSekelton,
 } from '../../components';
 
 interface TimeTableTabsProps {
@@ -56,18 +54,6 @@ export const TimeTableTabs: React.FC<TimeTableTabsProps> = ({
         </Tabs>
       </Box>
       <Container>
-        {/* {tabsData?.length === 0 && !isLoading ? (
-          <NotFound />
-        ) : isLoading ? (
-          <ScheduleCardSekelton isSmall={isSmall} />
-        ) : (
-          <div className={`grid  ${!isSmall ? 'grid-cols-2' : 'grid-cols-1'} `}>
-            {tabsData[selectedtab]?.map((item: any, index: number) => (
-              <ScheduleCard key={index} cardData={item} />
-            ))}
-          </div>
-        )} */}
-
         <LoadOnConditions
           size={tabsData[selectedtab]?.length}
           isLoading={isLoading}
