@@ -64,7 +64,7 @@ export const ClassRooms = () => {
 
     if (
       day.trim().length <= 3 ||
-      roomName.trim().length <= 3 ||
+      roomName.trim().length === 0 ||
       timeSlot.trim().length <= 3
     ) {
       alert('Please fill all the fields with at least 4 characters.');
