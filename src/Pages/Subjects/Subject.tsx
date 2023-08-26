@@ -4,9 +4,9 @@ import { useState } from 'react';
 
 import {
   AutoCompleteDropDown,
-  NotFound,
+  LoadOnConditions,
   ScheduleCard,
-  ScheduleCardSekelton,
+  Title,
 } from '../../components';
 import { fetchSubjectSchedule } from './fetchSubjectSchedule';
 
@@ -22,7 +22,6 @@ export const Subjects = () => {
     console.log(res.data);
     SetisLoading(false);
   };
-
   const cards = subjectSchedule?.map((item, index) => (
     <ScheduleCard key={index} cardData={item} />
   ));
@@ -38,45 +37,21 @@ export const Subjects = () => {
 
   return (
     <Container
-    sx={{
-      mb: 20,
-
+      sx={{
+        mb: 20,
         display: isSmall ? 'block' : 'block',
         gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-
-      gap: 2,
- 
-    }}
+        gap: 2,
+      }}
     >
-      <Typography
-        sx={{
-          fontSize: '1.5rem',
-          fontWeight: 'bold',
-          textAlign: 'center',
-          color: '#00396b',
-          fontFamily: ' "Dancing Script", cursive',
-          text: 'center',
-          py: 1,
-        }}
-        variant='h1'
-      >
-        Subjects
-      </Typography>
+      <Title title='Subjects' />
 
       <AutoCompleteDropDown
         options={subjects}
         OnClick={clickHandler}
         title='Subject'
       />
-      {subjectSchedule?.length === 0 && !isLoading ? (
-        <NotFound />
-      ) : isLoading ? (
-        <ScheduleCardSekelton isSmall={isSmall} />
-      ) : (
-        <div className={`grid ${!isSmall ? 'grid-cols-2' : 'grid-cols-1'}`}>
-          {cards}
-        </div>
-      )}
+      <LoadOnConditions size={subjectSchedule.length} isLoading={isLoading} isSmall={isSmall} cards={cards} />
     </Container>
   );
 };

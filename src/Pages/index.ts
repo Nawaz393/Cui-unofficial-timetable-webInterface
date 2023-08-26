@@ -4,4 +4,4 @@ export * from './Teachers/Teachers';
 export * from './ClassRooms/ClassRooms';
 export * from './Subjects/Subject';
 export * from './Timetable/TimeTable';
-export * from "./About/About"
+export * from './About/About';

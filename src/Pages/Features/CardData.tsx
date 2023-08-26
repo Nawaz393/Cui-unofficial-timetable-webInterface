@@ -1,5 +1,6 @@
 import ButtonCardProps from './ButtonCardProps';
 import { BsPerson } from 'react-icons/bs';
+import {MdOutlineFreeCancellation} from 'react-icons/md'
 import { BiSolidSchool, BiSolidBook, BiSolidCalendar } from 'react-icons/bi';
 const ButtonCardData: ButtonCardProps[] = [
   {
@@ -25,6 +26,12 @@ const ButtonCardData: ButtonCardProps[] = [
     icon: <BiSolidCalendar size='3em' />,
     description: 'Check a Class Schedule.',
     link: '/timetable',
+  },
+  {
+    name: 'Free Slots',
+    icon: <MdOutlineFreeCancellation size='3em' />,
+    description: 'Check Free Slots on specific day.',
+    link: '/freeSlots',
   },
 ];
 

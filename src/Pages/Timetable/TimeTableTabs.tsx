@@ -1,6 +1,11 @@
 import { Box, Container, Tab, Tabs } from '@mui/material';
 import { ChangeEvent, useState } from 'react';
-import { NotFound, ScheduleCard, ScheduleCardSekelton } from '../../components';
+import {
+  LoadOnConditions,
+  NotFound,
+  ScheduleCard,
+  ScheduleCardSekelton,
+} from '../../components';
 
 interface TimeTableTabsProps {
   tabs: string[];
@@ -22,6 +27,9 @@ export const TimeTableTabs: React.FC<TimeTableTabsProps> = ({
     setSelectedTab(value);
   };
 
+  const cards = tabsData[selectedtab]?.map((item: any, index: number) => (
+    <ScheduleCard key={index} cardData={item} />
+  ));
   console.log(tabsData);
   return (
     <Box
@@ -48,7 +56,7 @@ export const TimeTableTabs: React.FC<TimeTableTabsProps> = ({
         </Tabs>
       </Box>
       <Container>
-        {tabsData?.length === 0 && !isLoading ? (
+        {/* {tabsData?.length === 0 && !isLoading ? (
           <NotFound />
         ) : isLoading ? (
           <ScheduleCardSekelton isSmall={isSmall} />
@@ -58,7 +66,14 @@ export const TimeTableTabs: React.FC<TimeTableTabsProps> = ({
               <ScheduleCard key={index} cardData={item} />
             ))}
           </div>
-        )}
+        )} */}
+
+        <LoadOnConditions
+          size={tabsData[selectedtab]?.length}
+          isLoading={isLoading}
+          isSmall={isSmall}
+          cards={cards}
+        />
       </Container>
     </Box>
   );

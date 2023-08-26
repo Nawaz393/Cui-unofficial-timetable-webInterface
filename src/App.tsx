@@ -12,9 +12,11 @@ import {
 import axios from 'axios';
 import { MyProvider } from './context';
 import About from './Pages/About/About';
+import { FreeSlots } from './Pages/FreeSlots/FreeSlots';
 
 const App = () => {
-  axios.defaults.baseURL = import.meta.env.VITE_BASEURL;
+  // axios.defaults.baseURL = import.meta.env.VITE_BASEURL;
+  axios.defaults.baseURL = 'http://localhost:3000/web';
   return (
     <MyProvider>
       <Routes>
@@ -30,6 +32,8 @@ const App = () => {
           path='/timetable'
           element={<Layout children={<TimeTable />} />}
         />
+
+        <Route path='/freeSlots' element={<Layout children={<FreeSlots />} />} />
 
         <Route path='/about' element={<Layout children={<About />} />} />
 

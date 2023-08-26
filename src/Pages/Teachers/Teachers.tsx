@@ -1,12 +1,12 @@
-import { Container, Typography, useMediaQuery } from '@mui/material';
+import { Container, useMediaQuery } from '@mui/material';
 import { useMyContext } from '../../context';
 import { useState } from 'react';
 import { fetchTeacherSchedule } from './fetchTeacherSchedule';
 import {
   AutoCompleteDropDown,
-  NotFound,
+  LoadOnConditions,
   ScheduleCard,
-  ScheduleCardSekelton,
+  Title,
 } from '../../components';
 
 export const Teachers = () => {
@@ -18,12 +18,11 @@ export const Teachers = () => {
     SetisLoading(true);
     const res = await fetchTeacherSchedule(teacherName);
     SetTeacherSchedule(res.data);
-    console.log(res.data);
     SetisLoading(false);
   };
 
-  const cards = teacherSchedule?.map((item) => (
-    <ScheduleCard key={item.id} cardData={item} />
+  const cards = teacherSchedule?.map((item,index) => (
+    <ScheduleCard key={index+1} cardData={item} />
   ));
 
   const clickHandler = async (teacherName: string) => {
@@ -33,53 +32,28 @@ export const Teachers = () => {
     }
     Setschedule(teacherName);
   };
-  console.log(teacherSchedule.length);
 
   return (
     <Container
-    sx={{
-      mb: 20,
-
+      sx={{
+        mb: 20,
         display: isSmall ? 'block' : 'block',
         gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-
-      gap: 2,
- 
-    }}
+        gap: 2,
+      }}
     >
-      <Typography
-        sx={{
-          fontSize: '1.5rem',
-          fontWeight: 'bold',
-          textAlign: 'center',
-          color: '#00396b',
-          fontFamily: ' "Dancing Script", cursive',
-          text: 'center',
-          py: 1,
-        }}
-        variant='h1'
-      >
-        Teachers
-      </Typography>
-
+      <Title title='Teachers' />
       <AutoCompleteDropDown
         options={teachers}
         OnClick={clickHandler}
         title='Teacher'
       />
-      {teacherSchedule?.length === 0 && !isLoading ? (
-        <NotFound />
-      ) : isLoading ? (
-        <ScheduleCardSekelton isSmall={isSmall} />
-      ) : (
-        <div 
-        
-       
-        
-        className={`grid   ${!isSmall ? 'grid-cols-2' : 'grid-cols-1'} `}>
-          {cards}
-        </div>
-      )}
+      <LoadOnConditions
+        size={teacherSchedule.length}
+        isLoading={isLoading}
+        isSmall={isSmall}
+        cards={cards}
+      />
     </Container>
   );
 };

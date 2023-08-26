@@ -3,9 +3,11 @@ import { useMyContext } from '../../context';
 import { useState } from 'react';
 import {
   AutoCompleteDropDown,
+  LoadOnConditions,
   NotFound,
   ScheduleCard,
   ScheduleCardSekelton,
+  Title,
 } from '../../components';
 import { fetchClassRoom } from './fetchClassRoom';
 import { BiSearch } from 'react-icons/bi';
@@ -43,8 +45,8 @@ export const ClassRooms = () => {
     SetisLoading(false);
   };
 
-  const cards = roomSchedule?.map((item) => (
-    <ScheduleCard key={item.id} cardData={item} />
+  const cards = roomSchedule?.map((item, index) => (
+    <ScheduleCard key={index} cardData={item} />
   ));
 
   const handleDayChange = (day: string) => {
@@ -76,40 +78,22 @@ export const ClassRooms = () => {
 
   return (
     <Container
-    sx={{
-      mb: 20,
+      sx={{
+        mb: 20,
 
         display: isSmall ? 'block' : 'block',
         gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
 
-      gap: 2,
- 
-    }}
+        gap: 2,
+      }}
     >
-      <Typography
+      <Title title={'ClassRoom'} />
+      <Container
         sx={{
-          fontSize: '1.5rem',
-          fontWeight: 'bold',
-          textAlign: 'center',
-          color: '#00396b',
-          fontFamily: ' "Dancing Script", cursive',
-          text: 'center',
-          py: 1,
+          display: 'flex',
+          alignItems: 'center',
         }}
-        variant='h1'
       >
-        ClassRoom
-      </Typography>
-      <Container 
-      
-      
-      sx={{
-
-        display: 'flex',
-        alignItems: 'center',
-
-
-      }}>
         <AutoCompleteDropDown
           options={classRooms}
           OnClick={handleRoomChange}
@@ -135,15 +119,12 @@ export const ClassRooms = () => {
         </div>
       </Container>
 
-      {roomSchedule?.length === 0 && !isLoading ? (
-        <NotFound />
-      ) : isLoading ? (
-        <ScheduleCardSekelton isSmall={isSmall} />
-      ) : (
-        <div className={` grid ${!isSmall ? 'grid-cols-1' : 'grid-cols-1'}   `}>
-          {cards}
-        </div>
-      )}
+      <LoadOnConditions
+        size={roomSchedule.length}
+        isLoading={isLoading}
+        isSmall={isSmall}
+        cards={cards}
+      />
     </Container>
   );
 };

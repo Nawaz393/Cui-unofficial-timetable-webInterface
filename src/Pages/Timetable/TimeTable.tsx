@@ -2,7 +2,7 @@ import { Container, Typography, useMediaQuery } from '@mui/material';
 import { useMyContext } from '../../context';
 import { useState } from 'react';
 
-import { AutoCompleteDropDown } from '../../components';
+import { AutoCompleteDropDown, Title } from '../../components';
 import { fetchTimeTable } from './fetchTimeTable';
 import { TimeTableTabs } from './TimeTableTabs';
 
@@ -35,20 +35,7 @@ export const TimeTable = () => {
         mb: 20,
       }}
     >
-      <Typography
-        sx={{
-          fontSize: '1.5rem',
-          fontWeight: 'bold',
-          textAlign: 'center',
-          color: '#00396b',
-          fontFamily: ' "Dancing Script", cursive',
-          text: 'center',
-          pt: 1,
-        }}
-        variant='h1'
-      >
-        TimeTable
-      </Typography>
+      <Title title='Time Table' />
 
       <AutoCompleteDropDown
         options={classNames}
