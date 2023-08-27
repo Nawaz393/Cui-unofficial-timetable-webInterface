@@ -20,7 +20,7 @@ export default function Navbar({ elements }: Props): ReactElement {
       key={item.name}
       onClick={toggleMenu}
     >
-      <Link to={item.link}> {item.name}</Link>
+      <Link to={item.link} rel='canonical'> {item.name}</Link>
     </li>
   ));
 

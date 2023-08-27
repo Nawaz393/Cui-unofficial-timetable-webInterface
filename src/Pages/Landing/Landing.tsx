@@ -32,14 +32,14 @@ export const Landing = (): ReactNode => {
         ]}
       />
 
-      <h1 className='font-bold text-[38px] py-2 tracking-wider font-roboto  sm:w-1/2 color'>
+      <h1  className='font-bold text-[38px] py-2 tracking-wider font-roboto  sm:w-1/2 color'>
         Efficient Timetable Management
       </h1>
       <p className='color leading-7 text-lg font-roboto mt-4'>
         Our platform provides a comprehensive solution for managing class, room,
         teacher, and subject schedules. Try it Now.
       </p>
-      <Link to='/features'>
+      <Link to='/features' rel='canonical'>
         <button className='mt-8 bg-[#00396b] text-white hover:bg-[#002c4d] transition-colors delay-100 transform hover:-translate-y-1 text-lg font-bold py-3 px-8 rounded'>
           Explore Now
         </button>

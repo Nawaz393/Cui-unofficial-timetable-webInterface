@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material';
 
-export const Title:React.FC<{title: string}> = ({title}) => {
+export const Title: React.FC<{ title: string }> = ({ title }) => {
   return (
     <Typography
       sx={{
@@ -18,5 +18,3 @@ export const Title:React.FC<{title: string}> = ({title}) => {
     </Typography>
   );
 };
-
-

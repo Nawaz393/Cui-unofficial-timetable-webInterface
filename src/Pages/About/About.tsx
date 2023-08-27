@@ -46,7 +46,7 @@ const About: React.FC = () => {
         ]}
       />
       <Typography
-        variant='h3'
+        variant='h1'
         sx={{
           marginBottom: 3,
           fontFamily: 'Montserrat, sans-serif',
