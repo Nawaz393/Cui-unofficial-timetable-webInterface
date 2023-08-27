@@ -70,7 +70,7 @@ export const Subjects = () => {
         OnClick={clickHandler}
         title='Subject'
       />
-      <LoadOnConditions size={subjectSchedule.length} isLoading={isLoading} isSmall={isSmall} cards={cards} />
+      <LoadOnConditions size={subjectSchedule?.length} isLoading={isLoading} isSmall={isSmall} cards={cards} />
     </Container>
   );
 };

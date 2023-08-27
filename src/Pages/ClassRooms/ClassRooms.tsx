@@ -135,7 +135,7 @@ export const ClassRooms = () => {
       </Container>
 
       <LoadOnConditions
-        size={roomSchedule.length}
+        size={roomSchedule?.length}
         isLoading={isLoading}
         isSmall={isSmall}
         cards={cards}

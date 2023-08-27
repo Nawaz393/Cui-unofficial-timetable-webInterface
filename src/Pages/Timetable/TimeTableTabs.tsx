@@ -1,9 +1,6 @@
 import { Box, Container, Tab, Tabs } from '@mui/material';
 import { ChangeEvent, useState } from 'react';
-import {
-  LoadOnConditions,
-  ScheduleCard,
-} from '../../components';
+import { LoadOnConditions, ScheduleCard } from '../../components';
 
 interface TimeTableTabsProps {
   tabs: string[];

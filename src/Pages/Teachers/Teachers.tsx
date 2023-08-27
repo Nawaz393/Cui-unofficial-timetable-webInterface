@@ -62,7 +62,7 @@ export const Teachers = () => {
         title='Teacher'
       />
       <LoadOnConditions
-        size={teacherSchedule.length}
+        size={teacherSchedule?.length}
         isLoading={isLoading}
         isSmall={isSmall}
         cards={cards}
