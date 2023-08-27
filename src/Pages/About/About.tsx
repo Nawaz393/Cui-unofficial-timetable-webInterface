@@ -51,6 +51,7 @@ const About: React.FC = () => {
           marginBottom: 3,
           fontFamily: 'Montserrat, sans-serif',
           color: '#283593',
+          fontSize:'2rem'
         }}
       >
         About CUI unoffical Timetable
