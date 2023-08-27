@@ -1,5 +1,15 @@
 import React from 'react';
-import { Container, Typography, List, ListItem, ListItemText, Link, Grid, Box, IconButton } from '@mui/material';
+import {
+  Container,
+  Typography,
+  List,
+  ListItem,
+  ListItemText,
+  Link,
+  Grid,
+  Box,
+  IconButton,
+} from '@mui/material';
 import { BsEnvelope, BsGithub } from 'react-icons/bs';
 
 const About: React.FC = () => {
@@ -8,8 +18,16 @@ const About: React.FC = () => {
     "View a Subject's Schedule",
     'View your class schedules',
     'Stay organized with weekly timetable',
+    'View your class rooms Schedule',
+    'Find free slots in a room',
     'Easy navigation between different days',
     'Responsive design for mobile and desktop',
+  ];
+
+  const upcomingFeatures = [
+    'Auto Grade Calculator for each subject',
+    'Auto GPA Calculator for each semester',
+    'Auto CGPA Calculator for all semesters',
   ];
 
   return (
@@ -25,10 +43,12 @@ const About: React.FC = () => {
         About CUI unoffical Timetable
       </Typography>
       <Typography variant='body1' sx={{ marginBottom: 3, color: '#555' }}>
-        Welcome to the CUI Timetable application! This application provides an intuitive way to access and manage your class schedules at CUI.
+        Welcome to the CUI Timetable application! This application provides an
+        intuitive way to access and manage your class schedules at CUI.
       </Typography>
       <Typography variant='body1' sx={{ marginBottom: 4, color: '#555' }}>
-        Whether you're a student or a faculty member, our goal is to help you stay organized and enhance your academic experience.
+        Whether you're a student or a faculty member, our goal is to help you
+        stay organized and enhance your academic experience.
       </Typography>
       <Box sx={{ marginTop: 2, marginBottom: 2 }}>
         <Typography variant='h5' sx={{ marginBottom: 3, color: '#37474F' }}>
@@ -36,25 +56,66 @@ const About: React.FC = () => {
         </Typography>
         <List sx={{ marginTop: 2, marginBottom: 2 }}>
           {features.map((feature, index) => (
-            <ListItem key={index} sx={{ backgroundColor: '#ECEFF1', borderRadius: 8, marginBottom: 1, paddingLeft: 1 }}>
-              <ListItemText primary={feature} sx={{ color: '#333', fontWeight: 'bold' }} />
+            <ListItem
+              key={index}
+              sx={{
+                // different background color for each list item
+                backgroundColor: ' #ECEFF1 ',
+                borderRadius: 8,
+                marginBottom: 1,
+                paddingLeft: 1,
+              }}
+            >
+              <ListItemText
+                primary={feature}
+                sx={{ color: '#333', fontWeight: 'bold' }}
+              />
             </ListItem>
           ))}
         </List>
       </Box>
       <Typography variant='body1' sx={{ marginBottom: 3, color: '#555' }}>
-        We're dedicated to continually improving your experience. We hope you find this application indispensable for your academic journey.
+        We're dedicated to continually improving your experience. We hope you
+        find this application indispensable for your academic journey.
       </Typography>
+
+      <Typography variant='h5' sx={{ marginBottom: 3, color: '#37474F' }}>
+        Upcoming Advance Features:
+      </Typography>
+
+      {upcomingFeatures.map((feature, index) => (
+        <ListItem
+          key={index}
+          sx={{
+            // different background color  from above  dark one
+
+            backgroundColor: '#22E000 ',
+            borderRadius: 8,
+            marginBottom: 1,
+            paddingLeft: 1,
+          }}
+        >
+          <ListItemText
+            primary={feature}
+            sx={{ color: '#333', fontWeight: 'bold' }}
+          />
+        </ListItem>
+      ))}
       <Typography variant='h5' sx={{ marginBottom: 3, color: '#37474F' }}>
         Developer Info:
       </Typography>
       <Box sx={{ marginBottom: 3 }}>
         <Typography variant='body1' sx={{ marginBottom: 1 }}>
-          This application is developed by <b>Mohammad Nawaz</b>.
+          This application is developed by <b>Muhammad Nawaz Khan</b>.
         </Typography>
         <Grid container spacing={2}>
           <Grid item sx={{ m: 1 }}>
-            <Link href='https://github.com/Nawaz393' target='_blank' rel='noopener noreferrer' color='secondary'>
+            <Link
+              href='https://github.com/Nawaz393'
+              target='_blank'
+              rel='noopener noreferrer'
+              color='secondary'
+            >
               <IconButton sx={{ m: 1 }}>
                 <BsGithub size='2em' />
               </IconButton>
