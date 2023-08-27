@@ -32,7 +32,7 @@
 
 ![Demo GIF](link-to-demo-gif)
 
-Check out the live demo [here](link-to-live-demo).
+Check out the live demo [here](https://cuiunofficialtimetable.vercel.app/).
 
 ## Usage
 
