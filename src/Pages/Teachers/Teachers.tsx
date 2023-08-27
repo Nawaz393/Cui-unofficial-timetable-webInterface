@@ -8,6 +8,7 @@ import {
   ScheduleCard,
   Title,
 } from '../../components';
+import SeoHelmet from '../../components/Seo/SeoHelmet';
 
 export const Teachers = () => {
   const { teachers } = useMyContext();
@@ -21,8 +22,8 @@ export const Teachers = () => {
     SetisLoading(false);
   };
 
-  const cards = teacherSchedule?.map((item,index) => (
-    <ScheduleCard key={index+1} cardData={item} />
+  const cards = teacherSchedule?.map((item, index) => (
+    <ScheduleCard key={index + 1} cardData={item} />
   ));
 
   const clickHandler = async (teacherName: string) => {
@@ -42,6 +43,18 @@ export const Teachers = () => {
         gap: 2,
       }}
     >
+      <SeoHelmet
+        title='Teachers'
+        additionalKeywords={[
+          'Teachers',
+          'Cui Teachers',
+          'Cui Teachers Schedule',
+          'Cui Teachers TimeTable',
+          'Cui Teachers Class Schedule',
+          'Cui Teachers Class TimeTable',
+          'Cui Teachers Class Schedule',
+        ]}
+      />
       <Title title='Teachers' />
       <AutoCompleteDropDown
         options={teachers}

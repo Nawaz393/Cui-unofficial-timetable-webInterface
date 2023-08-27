@@ -11,3 +11,4 @@ export * from './ScheduleCard/ScheduleCardSekelton';
 export * from './Title';
 
 export * from './LoadOnCondition/LoadOnConditions';
+export * from "./Seo/SeoHelmet"

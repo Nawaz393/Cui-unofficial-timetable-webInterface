@@ -11,6 +11,7 @@ import {
   IconButton,
 } from '@mui/material';
 import { BsEnvelope, BsGithub } from 'react-icons/bs';
+import SeoHelmet from '../../components/Seo/SeoHelmet';
 
 const About: React.FC = () => {
   const features = [
@@ -32,6 +33,18 @@ const About: React.FC = () => {
 
   return (
     <Container maxWidth='md' sx={{ marginTop: 1, padding: 2 }}>
+      <SeoHelmet
+        title='About'
+        additionalKeywords={[
+          'About',
+          'Cui About',
+          'Cui About Schedule',
+          'Cui About TimeTable',
+          'Cui About Class Schedule',
+          'Cui About Class TimeTable',
+          'Cui About Class Schedule',
+        ]}
+      />
       <Typography
         variant='h3'
         sx={{

@@ -9,6 +9,7 @@ import {
   Title,
 } from '../../components';
 import { fetchSubjectSchedule } from './fetchSubjectSchedule';
+import SeoHelmet from '../../components/Seo/SeoHelmet';
 
 export const Subjects = () => {
   const { subjects } = useMyContext();
@@ -44,6 +45,24 @@ export const Subjects = () => {
         gap: 2,
       }}
     >
+
+
+      <SeoHelmet title='Subjects' 
+      
+      additionalKeywords={[
+        'Subjects',
+        'Cui Subjects',
+        'Cui Subjects Schedule',
+        'Cui Subjects TimeTable',
+        'Cui Subjects  Schedule',
+        'Cui Subjects  TimeTable',
+        'Cui unofficial subject Schedule',
+        'Cui unofficial subject Timetable',
+        'cui atd subject schedule',
+        'cui atd unofficial subject schedule',
+      ]}
+      
+      />
       <Title title='Subjects' />
 
       <AutoCompleteDropDown

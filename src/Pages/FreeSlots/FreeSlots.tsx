@@ -9,6 +9,7 @@ import {
 import { fetchFreeSlots } from './fetchFreeSlots';
 import { FreeSlotCard } from './FreeSlotCard';
 import FreeSlotType from './freeSlotType';
+import SeoHelmet from '../../components/Seo/SeoHelmet';
 
 export const FreeSlots = () => {
   const [freeSlots, SetFreeSlots] = useState<FreeSlotType>({});
@@ -48,6 +49,20 @@ export const FreeSlots = () => {
       }}
     >
       <Title title='Free Slots' />
+
+      <SeoHelmet 
+
+        title='Free Slots'
+        additionalKeywords={[
+          'Free Slots',
+          'Cui Free Slots',
+          'Cui Free Slots Schedule',
+          'Cui Free Slots TimeTable',
+          'Cui Free Slots  Schedule',
+          'Cui Free Slots  TimeTable',
+          'Cui unofficial Free Slots Schedule',
+          'Cui unofficial Free Slots Timetable',
+        ]}/>
 
       <AutoCompleteDropDown
         options={days}

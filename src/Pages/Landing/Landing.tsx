@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { LandingSkeleton } from '../../components';
 import { useMyContext } from '../../context';
+import SeoHelmet from '../../components/Seo/SeoHelmet';
 
 export const Landing = (): ReactNode => {
   const { loading } = useMyContext();
@@ -15,7 +16,22 @@ export const Landing = (): ReactNode => {
   }
   return (
     <div className='h-full p-10 sm:py-28'>
-      
+      <SeoHelmet
+        title='Home'
+        additionalKeywords={[
+          'Cui TimeTable',
+          'Cui Class Schedule',
+          'Cui Class TimeTable',
+          'Cui subject Schedule',
+          'Cui subject TimeTable',
+          'Cui Teachers Schedule',
+          'Cui Teachers TimeTable',
+          'cui timetable',
+          'cui atd timetable',
+          'cui atd unofficial timetable',
+        ]}
+      />
+
       <h1 className='font-bold text-[38px] py-2 tracking-wider font-roboto  sm:w-1/2 color'>
         Efficient Timetable Management
       </h1>
@@ -31,4 +47,3 @@ export const Landing = (): ReactNode => {
     </div>
   );
 };
-

@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { AutoCompleteDropDown, Title } from '../../components';
 import { fetchTimeTable } from './fetchTimeTable';
 import { TimeTableTabs } from './TimeTableTabs';
+import SeoHelmet from '../../components/Seo/SeoHelmet';
 
 export const TimeTable = () => {
   const { classNames } = useMyContext();
@@ -35,6 +36,18 @@ export const TimeTable = () => {
         mb: 20,
       }}
     >
+      <SeoHelmet
+        title='Time Table'
+        additionalKeywords={[
+          'Class TimeTable ',
+          'Class Schedule',
+          'Cui atd Class TimeTable',
+          'Semester Schedule',
+          'Cui Atd Semester Schedule',
+          'Cui unofficial timetable ',
+          'Cui unofficial Timetable',
+        ]}
+      />
       <Title title='Time Table' />
 
       <AutoCompleteDropDown

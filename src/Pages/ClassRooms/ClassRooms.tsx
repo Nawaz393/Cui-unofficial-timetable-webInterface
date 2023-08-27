@@ -9,6 +9,7 @@ import {
 } from '../../components';
 import { fetchClassRoom } from './fetchClassRoom';
 import { BiSearch } from 'react-icons/bi';
+import SeoHelmet from '../../components/Seo/SeoHelmet';
 
 export const ClassRooms = () => {
   const { timeSlots, classRooms } = useMyContext();
@@ -85,6 +86,22 @@ export const ClassRooms = () => {
         gap: 2,
       }}
     >
+
+
+      <SeoHelmet
+        title='ClassRoom'
+        additionalKeywords={[
+          'ClassRoom',
+          'Cui ClassRoom',
+          'Cui ClassRoom Schedule',
+          'Cui ClassRoom TimeTable',
+          'Cui ClassRoom  Schedule',
+          'Cui ClassRoom  TimeTable',
+          'Cui unofficial ClassRoom Schedule',
+          'Cui unofficial ClassRoom Timetable',
+          'cui atd ClassRoom schedule',
+          'cui atd unofficial ClassRoom schedule',
+        ]}/>
       <Title title={'ClassRoom'} />
       <Container
         sx={{
