@@ -13,13 +13,19 @@ import axios from 'axios';
 import { MyProvider } from './context';
 import About from './Pages/About/About';
 import { FreeSlots } from './Pages/FreeSlots/FreeSlots';
+import ReactGa from 'react-ga';
+import GoogleAnalyticsTracker from './components/GoogleAnalyticsTracker';
 
 const App = () => {
   axios.defaults.baseURL = import.meta.env.VITE_BASEURL;
   // axios.defaults.baseURL = 'http://localhost:3000/web';
+
+  const TrackinID = 'UA-252534530-1';
+
   return (
     <MyProvider>
       <Routes>
+        <GoogleAnalyticsTracker trackingId={TrackinID} />
         <Route path='/' element={<Layout children={<Landing />} />} />
         <Route path='/features' element={<Layout children={<Features />} />} />
         <Route path='/teachers' element={<Layout children={<Teachers />} />} />
@@ -33,10 +39,12 @@ const App = () => {
           element={<Layout children={<TimeTable />} />}
         />
 
-        <Route path='/freeSlots' element={<Layout children={<FreeSlots />} />} />
+        <Route
+          path='/freeSlots'
+          element={<Layout children={<FreeSlots />} />}
+        />
 
         <Route path='/about' element={<Layout children={<About />} />} />
-
 
         <Route path='*' element={<Layout children={<Landing />} />} />
       </Routes>

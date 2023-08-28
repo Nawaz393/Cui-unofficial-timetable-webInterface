@@ -12,3 +12,4 @@ export * from './Title';
 
 export * from './LoadOnCondition/LoadOnConditions';
 export * from "./Seo/SeoHelmet"
+export * from "./GoogleAnalyticsTracker"

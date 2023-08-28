@@ -14,6 +14,11 @@ import { BsEnvelope, BsGithub } from 'react-icons/bs';
 import SeoHelmet from '../../components/Seo/SeoHelmet';
 
 const About: React.FC = () => {
+
+
+
+
+
   const features = [
     "View Teacher's Schedule",
     "View a Subject's Schedule",
