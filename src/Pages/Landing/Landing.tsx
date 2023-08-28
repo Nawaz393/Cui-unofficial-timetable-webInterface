@@ -17,7 +17,7 @@ export const Landing = (): ReactNode => {
   }
   return (
     <div className='h-full p-10 sm:py-28'>
-      <GoogleAnalyticsTracker trackingId='UA-252534530-1' />
+      <GoogleAnalyticsTracker trackingId='G-4GH1YL4D94' />
 
       <SeoHelmet
         title='Home'

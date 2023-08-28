@@ -29,7 +29,7 @@ export const Subjects = () => {
   ));
 
   useEffect(() => {
-    ReactGa.initialize('UA-252534530-1');
+    ReactGa.initialize('G-4GH1YL4D94');
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
 
