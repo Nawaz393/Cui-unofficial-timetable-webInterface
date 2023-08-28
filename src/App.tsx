@@ -23,8 +23,8 @@ const App = () => {
 
   return (
     <MyProvider>
+      <GoogleAnalyticsTracker trackingId={TrackinID} />
       <Routes>
-        <GoogleAnalyticsTracker trackingId={TrackinID} />
         <Route path='/' element={<Layout children={<Landing />} />} />
         <Route path='/features' element={<Layout children={<Features />} />} />
         <Route path='/teachers' element={<Layout children={<Teachers />} />} />
