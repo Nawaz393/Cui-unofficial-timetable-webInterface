@@ -1,6 +1,7 @@
 import { Container,  useMediaQuery } from '@mui/material';
 import { useMyContext } from '../../context';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
+import ReactGa from 'react-ga';
 
 import {
   AutoCompleteDropDown,
@@ -26,6 +27,12 @@ export const Subjects = () => {
   const cards = subjectSchedule?.map((item, index) => (
     <ScheduleCard key={index} cardData={item} />
   ));
+
+  useEffect(() => {
+    ReactGa.initialize('UA-252534530-1');
+    ReactGa.pageview(window.location.pathname + window.location.search);
+  }, []);
+
 
   const clickHandler = async (teacherName: string) => {
     if (teacherName === '') {

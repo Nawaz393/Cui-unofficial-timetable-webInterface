@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { LandingSkeleton } from '../../components';
 import { useMyContext } from '../../context';
 import SeoHelmet from '../../components/Seo/SeoHelmet';
+import GoogleAnalyticsTracker from '../../components/GoogleAnalyticsTracker';
 
 export const Landing = (): ReactNode => {
   const { loading } = useMyContext();
@@ -16,6 +17,8 @@ export const Landing = (): ReactNode => {
   }
   return (
     <div className='h-full p-10 sm:py-28'>
+      <GoogleAnalyticsTracker trackingId='UA-252534530-1' />
+
       <SeoHelmet
         title='Home'
         additionalKeywords={[
@@ -32,7 +35,7 @@ export const Landing = (): ReactNode => {
         ]}
       />
 
-      <h1  className='font-bold text-[38px] py-2 tracking-wider font-roboto  sm:w-1/2 color'>
+      <h1 className='font-bold text-[38px] py-2 tracking-wider font-roboto  sm:w-1/2 color'>
         Efficient Timetable Management
       </h1>
       <p className='color leading-7 text-lg font-roboto mt-4'>
