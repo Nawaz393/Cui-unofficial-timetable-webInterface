@@ -13,7 +13,6 @@ import axios from 'axios';
 import { MyProvider } from './context';
 import About from './Pages/About/About';
 import { FreeSlots } from './Pages/FreeSlots/FreeSlots';
-import ReactGa from 'react-ga';
 import GoogleAnalyticsTracker from './components/GoogleAnalyticsTracker';
 
 const App = () => {
@@ -38,12 +37,10 @@ const App = () => {
           path='/timetable'
           element={<Layout children={<TimeTable />} />}
         />
-
         <Route
           path='/freeSlots'
           element={<Layout children={<FreeSlots />} />}
         />
-
         <Route path='/about' element={<Layout children={<About />} />} />
 
         <Route path='*' element={<Layout children={<Landing />} />} />
