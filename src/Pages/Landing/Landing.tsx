@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { LandingSkeleton } from '../../components';
 import { useMyContext } from '../../context';
 import SeoHelmet from '../../components/Seo/SeoHelmet';
-import GoogleAnalyticsTracker from '../../components/GoogleAnalyticsTracker';
 
 export const Landing = (): ReactNode => {
   const { loading } = useMyContext();
@@ -17,7 +16,6 @@ export const Landing = (): ReactNode => {
   }
   return (
     <div className='h-full p-10 sm:py-28'>
-      <GoogleAnalyticsTracker trackingId='G-4GH1YL4D94' />
 
       <SeoHelmet
         title='Home'

@@ -13,17 +13,13 @@ import axios from 'axios';
 import { MyProvider } from './context';
 import About from './Pages/About/About';
 import { FreeSlots } from './Pages/FreeSlots/FreeSlots';
-import GoogleAnalyticsTracker from './components/GoogleAnalyticsTracker';
 
 const App = () => {
   axios.defaults.baseURL = import.meta.env.VITE_BASEURL;
   // axios.defaults.baseURL = 'http://localhost:3000/web';
 
-  const TrackinID = 'UA-252534530-1';
-
   return (
     <MyProvider>
-      <GoogleAnalyticsTracker trackingId={TrackinID} />
       <Routes>
         <Route path='/' element={<Layout children={<Landing />} />} />
         <Route path='/features' element={<Layout children={<Features />} />} />
