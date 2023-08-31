@@ -1,4 +1,4 @@
-import { Container,  useMediaQuery } from '@mui/material';
+import { Container, useMediaQuery } from '@mui/material';
 import { useMyContext } from '../../context';
 import { useState } from 'react';
 
@@ -27,8 +27,6 @@ export const Subjects = () => {
     <ScheduleCard key={index} cardData={item} />
   ));
 
-
-
   const clickHandler = async (teacherName: string) => {
     if (teacherName === '') {
       SetSubjectSchedule([]);
@@ -36,8 +34,6 @@ export const Subjects = () => {
     }
     Setschedule(teacherName);
   };
-  console.log(subjectSchedule.length);
-
   return (
     <Container
       sx={{
@@ -47,32 +43,36 @@ export const Subjects = () => {
         gap: 2,
       }}
     >
-
-
-      <SeoHelmet title='Subjects' 
-      
-      additionalKeywords={[
-        'Subjects',
-        'Cui Subjects',
-        'Cui Subjects Schedule',
-        'Cui Subjects TimeTable',
-        'Cui Subjects  Schedule',
-        'Cui Subjects  TimeTable',
-        'Cui unofficial subject Schedule',
-        'Cui unofficial subject Timetable',
-        'cui atd subject schedule',
-        'cui atd unofficial subject schedule',
-      ]}
-      
+      <SeoHelmet
+        title='Subjects - CUI Timetable'
+        description='Access subject schedules at CUI through the efficient CUI Timetable app. Find class timings, teachers, and more.'
+        additionalKeywords={[
+          'Subjects',
+          'Cui Subjects',
+          'Subject Schedules',
+          'Cui Subject TimeTable',
+          'Cui unofficial subject Timetable',
+          'cui atd subject schedule',
+        ]}
       />
       <Title title='Subjects' />
+
+      <p className='color font-roboto '>
+        Find the schedules for various subjects at CUI. Select a subject from
+        the dropdown to view its class timings and teacher assignments.
+      </p>
 
       <AutoCompleteDropDown
         options={subjects}
         OnClick={clickHandler}
         title='Subject'
       />
-      <LoadOnConditions size={subjectSchedule?.length} isLoading={isLoading} isSmall={isSmall} cards={cards} />
+      <LoadOnConditions
+        size={subjectSchedule?.length}
+        isLoading={isLoading}
+        isSmall={isSmall}
+        cards={cards}
+      />
     </Container>
   );
 };

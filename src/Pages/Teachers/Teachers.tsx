@@ -44,18 +44,24 @@ export const Teachers = () => {
       }}
     >
       <SeoHelmet
-        title='Teachers'
+        title='Teachers - CUI Timetable'
+        description='Explore teacher schedules at CUI through the efficient CUI Timetable app. Find class timings, subjects, and more.'
         additionalKeywords={[
           'Teachers',
           'Cui Teachers',
-          'Cui Teachers Schedule',
-          'Cui Teachers TimeTable',
-          'Cui Teachers Class Schedule',
-          'Cui Teachers Class TimeTable',
-          'Cui Teachers Class Schedule',
+          'Teacher Schedules',
+          'Cui Teacher TimeTable',
+          'Cui unofficial teacher Timetable',
+          'cui atd teacher schedule',
         ]}
       />
       <Title title='Teachers' />
+
+      <p className='color'>
+        Discover the schedules of different teachers at CUI. Select a teacher
+        from the dropdown to view their class timings and assigned subjects.
+      </p>
+
       <AutoCompleteDropDown
         options={teachers}
         OnClick={clickHandler}

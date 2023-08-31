@@ -23,9 +23,7 @@ export const FreeSlots = () => {
     SetisLoading(false);
   };
 
-
-
-  const days=['Monday','Tuesday','Wednesday','Thursday','Friday'];
+  const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
   const clickHandler = async (day: string) => {
     if (day === '') {
       SetFreeSlots({});
@@ -41,35 +39,38 @@ export const FreeSlots = () => {
     <Container
       sx={{
         mb: 20,
-
         display: isSmall ? 'block' : 'block',
         gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-
         gap: 2,
       }}
     >
-      <Title title='Free Slots' />
-
-      <SeoHelmet 
-
-        title='Free Slots'
+      <SeoHelmet
+        title='Free Slots - CUI Timetable'
+        description='Explore free slot schedules at CUI through the efficient CUI Timetable app. Find available time slots for each day.'
         additionalKeywords={[
           'Free Slots',
           'Cui Free Slots',
-          'Cui Free Slots Schedule',
+          'Free Slots Schedule',
           'Cui Free Slots TimeTable',
-          'Cui Free Slots  Schedule',
-          'Cui Free Slots  TimeTable',
-          'Cui unofficial Free Slots Schedule',
           'Cui unofficial Free Slots Timetable',
-        ]}/>
-
-      <AutoCompleteDropDown
-        options={days}
-        OnClick={clickHandler}
-        title='Day'
+          'cui atd free slots schedule',
+          'cui atd unofficial free slots schedule',
+        ]}
       />
-      <LoadOnConditions size={Object.keys(freeSlots)?.length} isLoading={isLoading} isSmall={isSmall} cards={cards} />
+      <Title title='Free Slots' />
+
+      <p className='color'>
+        Discover available free slots for different days at CUI. Select a day
+        from the dropdown to view the available time slots.
+      </p>
+
+      <AutoCompleteDropDown options={days} OnClick={clickHandler} title='Day' />
+      <LoadOnConditions
+        size={Object.keys(freeSlots)?.length}
+        isLoading={isLoading}
+        isSmall={isSmall}
+        cards={cards}
+      />
     </Container>
   );
 };

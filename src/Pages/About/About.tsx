@@ -14,11 +14,6 @@ import { BsEnvelope, BsGithub } from 'react-icons/bs';
 import SeoHelmet from '../../components/Seo/SeoHelmet';
 
 const About: React.FC = () => {
-
-
-
-
-
   const features = [
     "View Teacher's Schedule",
     "View a Subject's Schedule",
@@ -39,7 +34,8 @@ const About: React.FC = () => {
   return (
     <Container maxWidth='md' sx={{ marginTop: 1, padding: 2 }}>
       <SeoHelmet
-        title='About'
+        title='About CUI Timetable'
+        description='Learn about the CUI Timetable application and its features. Stay organized and enhance your academic experience with this intuitive timetable management tool.'
         additionalKeywords={[
           'About',
           'Cui About',
@@ -56,18 +52,14 @@ const About: React.FC = () => {
           marginBottom: 3,
           fontFamily: 'Montserrat, sans-serif',
           color: '#283593',
-          fontSize:'2rem'
+          fontSize: '2rem',
         }}
       >
-        About CUI unoffical Timetable
+        About CUI Unofficial Timetable
       </Typography>
       <Typography variant='body1' sx={{ marginBottom: 3, color: '#555' }}>
-        Welcome to the CUI Timetable application! This application provides an
-        intuitive way to access and manage your class schedules at CUI.
-      </Typography>
-      <Typography variant='body1' sx={{ marginBottom: 4, color: '#555' }}>
-        Whether you're a student or a faculty member, our goal is to help you
-        stay organized and enhance your academic experience.
+        Welcome to the CUI Timetable application! Discover an intuitive way to
+        access and manage class schedules at CUI.
       </Typography>
       <Box sx={{ marginTop: 2, marginBottom: 2 }}>
         <Typography variant='h5' sx={{ marginBottom: 3, color: '#37474F' }}>

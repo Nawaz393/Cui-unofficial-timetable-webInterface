@@ -79,30 +79,35 @@ export const ClassRooms = () => {
     <Container
       sx={{
         mb: 20,
-
         display: isSmall ? 'block' : 'block',
         gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-
         gap: 2,
       }}
     >
-
-
       <SeoHelmet
-        title='ClassRoom'
+        title='Class Room Schedule - CUI Timetable'
+        description='Access class room schedules at CUI through the efficient CUI Timetable app. Use the dropdowns to select a room, time slot, and day for viewing the schedule.'
         additionalKeywords={[
           'ClassRoom',
           'Cui ClassRoom',
           'Cui ClassRoom Schedule',
           'Cui ClassRoom TimeTable',
-          'Cui ClassRoom  Schedule',
-          'Cui ClassRoom  TimeTable',
+          'Cui ClassRoom Schedule',
+          'Cui ClassRoom TimeTable',
           'Cui unofficial ClassRoom Schedule',
           'Cui unofficial ClassRoom Timetable',
           'cui atd ClassRoom schedule',
           'cui atd unofficial ClassRoom schedule',
-        ]}/>
-      <Title title={'ClassRoom'} />
+        ]}
+      />
+      <Title title={'Class Room Schedule'} />
+
+      <p className='color'>
+        Access class room schedules at CUI. Use the dropdowns to select a room,
+        time slot, and day for viewing the schedule. Click the search icon to
+        retrieve the schedule for your selected criteria.
+      </p>
+
       <Container
         sx={{
           display: 'flex',

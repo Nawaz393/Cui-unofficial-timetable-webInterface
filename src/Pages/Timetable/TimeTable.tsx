@@ -37,18 +37,25 @@ export const TimeTable = () => {
       }}
     >
       <SeoHelmet
-        title='Time Table'
+        title='Class Time Table - CUI Timetable'
+        description='Explore class timetables at CUI through the efficient CUI Timetable app. Select a class name from the dropdown to view the schedule for different days.'
         additionalKeywords={[
-          'Class TimeTable ',
+          'Class TimeTable',
           'Class Schedule',
           'Cui atd Class TimeTable',
           'Semester Schedule',
           'Cui Atd Semester Schedule',
-          'Cui unofficial timetable ',
+          'Cui unofficial timetable',
           'Cui unofficial Timetable',
         ]}
       />
-      <Title title='Time Table' />
+      <Title title='Class Time Table' />
+
+      <p className='color'>
+        Find class timetables for different days at CUI. Select a class name
+        from the dropdown to view the schedule. Tabs represent different days of
+        the week.
+      </p>
 
       <AutoCompleteDropDown
         options={classNames}
