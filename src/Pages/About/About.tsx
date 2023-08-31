@@ -70,7 +70,6 @@ const About: React.FC = () => {
             <ListItem
               key={index}
               sx={{
-                // different background color for each list item
                 backgroundColor: ' #ECEFF1 ',
                 borderRadius: 8,
                 marginBottom: 1,
@@ -98,8 +97,6 @@ const About: React.FC = () => {
         <ListItem
           key={index}
           sx={{
-            // different background color  from above  dark one
-
             backgroundColor: '#22E000 ',
             borderRadius: 8,
             marginBottom: 1,
