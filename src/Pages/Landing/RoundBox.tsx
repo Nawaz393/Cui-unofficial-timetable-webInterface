@@ -10,9 +10,9 @@ const RoundBox: React.FC<BoxProps> = ({ size, title }) => {
     <Box
       sx={{
         border: '1px solid #e0e0e0',
-        borderRadius: '50%',
-        p:2,
-        mr:2,
+        borderRadius: '10%',
+        p: 3,
+        mr: 2,
         boxShadow: '0px 0px 10px #e0e0e0',
       }}
     >

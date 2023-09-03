@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { LandingSkeleton } from '../../components';
 import { useMyContext } from '../../context';
 import SeoHelmet from '../../components/Seo/SeoHelmet';
-import {  Container } from '@mui/material';
+import { Container } from '@mui/material';
 import RoundBox from './RoundBox';
 
 export const Landing = (): ReactNode => {
@@ -43,8 +43,6 @@ export const Landing = (): ReactNode => {
       </Link>
 
       <Container
-      
-
         sx={{
           display: 'flex',
           flexDirection: 'row',
@@ -52,15 +50,10 @@ export const Landing = (): ReactNode => {
           justifyContent: 'space-around',
           marginTop: 6,
         }}
-      
       >
-
-<RoundBox title='Total Rooms' size={classRooms?.length} />
-<RoundBox title='Total Teachers' size={teachers?.length} />
-<RoundBox title='Total Classes' size={classNames.length} />
-
-
-
+        <RoundBox title='Total Rooms' size={classRooms?.length} />
+        <RoundBox title='Total Teachers' size={teachers?.length} />
+        <RoundBox title='Total Classes' size={classNames.length} />
       </Container>
     </div>
   );

@@ -42,7 +42,9 @@ export default function Navbar({ elements }: Props): ReactElement {
           />
         </button>
         <div>
-          <img src={icon} alt='icon' className='w-14 h-12 ml-4' />
+          <Link to='/' rel='canonical'>
+            <img src={icon} alt='icon' className='w-14 h-12 ml-4' />
+          </Link>
         </div>
       </div>
       <ul

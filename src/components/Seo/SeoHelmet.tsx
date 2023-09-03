@@ -19,6 +19,9 @@ const SeoHelmet: React.FC<HelmetProps> = ({
     'Abbotabbad Time Table',
     'CUI Unofficial',
     'Time Table Management',
+    `cui atd timetable ${new Date().getFullYear()}`,
+    'cui atd timetable',
+    'cui atd time table',
   ];
 
   const combinedKeywords = [...defaultKeywords, ...additionalKeywords].join(
