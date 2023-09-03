@@ -111,28 +111,37 @@ export const ClassRooms = () => {
       <Container
         sx={{
           display: 'flex',
+          flexDirection: 'column', // Stack elements vertically on mobile
           alignItems: 'center',
+          padding: '5px', // Add some padding for spacing
+          '@media (min-width: 600px)': {
+            flexDirection: 'row', // Align elements horizontally on desktop
+            justifyContent: 'center',
+          },
         }}
       >
         <AutoCompleteDropDown
           options={classRooms}
           OnClick={handleRoomChange}
           title='ClassRoom'
+          className='w-full  py-2 px-4  text-base sm:text-lg border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-gray-900'
         />
         <AutoCompleteDropDown
           title='TimeSlot'
           options={timeSlots}
           OnClick={handleTimeSlotChange}
+          className='w-full  py-2 px-4 text-base sm:text-lg border border-gray-300 rounded-md focus:outline-none focus:ring focus:focus:border-gray-900'
         />
-
         <AutoCompleteDropDown
           options={days}
           OnClick={handleDayChange}
           title='Day'
+          className='w-full  py-2 px-4 text-base sm:text-lg border border-gray-300 rounded-md focus:outline-none focus:ring focus:focus:border-gray-900'
         />
+
         <div
           role='button '
-          className=' flex justify-center mt-10 items-center px-1  cursor-pointer '
+          className=' flex justify-center sm:mt-10 mt-3 items-center px-1  cursor-pointer '
           onClick={handleClick}
         >
           <BiSearch className='text-gray-500 text-4xl self-center ' />
