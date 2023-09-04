@@ -19,12 +19,12 @@ export const MyProvider: React.FC<ProviderProps> = ({ children }) => {
   useEffect(() => {
     (async () => {
       setLoading(true);
-      if (localStorage.getItem('dropdownData') === null) {
+      if (sessionStorage.getItem('dropdownData') === null) {
         const response = await usefetch('/');
         const { teachers, subjects, classRooms, timeSlots, classNames } =
           response.data;
 
-        localStorage.setItem('dropdownData', JSON.stringify(response.data));
+        sessionStorage.setItem('dropdownData', JSON.stringify(response.data));
         setTeachers(teachers);
         setSubjects(subjects);
         setClassRooms(classRooms);
@@ -32,7 +32,7 @@ export const MyProvider: React.FC<ProviderProps> = ({ children }) => {
         setClassNames(classNames); // Set classNames here
       } else {
         const { teachers, subjects, classRooms, timeSlots, classNames } =
-          JSON.parse(localStorage.getItem('dropdownData')!);
+          JSON.parse(sessionStorage.getItem('dropdownData')!);
         setTeachers(teachers);
         setSubjects(subjects);
         setClassRooms(classRooms);
