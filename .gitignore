@@ -6,7 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
+# Ignore these two folders
+src/components/ScheduleCard
+src/components/ScheduleCard
 node_modules
 dist
 dist-ssr
