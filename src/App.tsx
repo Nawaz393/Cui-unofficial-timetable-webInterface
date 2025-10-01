@@ -13,14 +13,16 @@ import axios from 'axios';
 import { MyProvider } from './context';
 import About from './Pages/About/About';
 import { FreeSlots } from './Pages/FreeSlots/FreeSlots';
+// import { DynamicBuilder } from './Pages/Builder/DymanicBuilder';
 
 const App = () => {
-  axios.defaults.baseURL = import.meta.env.VITE_BASEURL;
-  // axios.defaults.baseURL = 'http://localhost:3000/web';
+  // axios.defaults.baseURL = import.meta.env.VITE_BASEURL;
+  axios.defaults.baseURL = "https://cui-atd-scrapper.vercel.app/web";
 
   return (
     <MyProvider>
       <Routes>
+
         <Route path='/' element={<Layout children={<Landing />} />} />
         <Route path='/features' element={<Layout children={<Features />} />} />
         <Route path='/teachers' element={<Layout children={<Teachers />} />} />
@@ -28,6 +30,7 @@ const App = () => {
           path='/classroom'
           element={<Layout children={<ClassRooms />} />}
         />
+        {/* <Route path='/builder' element={<Layout children={<DynamicBuilder />} />} /> */}
         <Route path='/subjects' element={<Layout children={<Subjects />} />} />
         <Route
           path='/timetable'

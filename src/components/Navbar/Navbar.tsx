@@ -36,7 +36,7 @@ export default function Navbar({ elements }: Props): ReactElement {
           <BsList
             size='2em'
             title='menu'
-            alt='menu'
+            // alt='menu'
             className='text-white'
             role='button'
           />

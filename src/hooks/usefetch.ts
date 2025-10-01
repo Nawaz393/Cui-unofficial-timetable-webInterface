@@ -27,7 +27,9 @@ export const usefetch = async (url: string): Promise<Rusefetch> => {
       error: true,
       data: null,
 
-      message: (err as any).response?.data?.message || 'An error occurred',
+      message:
+        (err as unknown as { response: { data: { message: string } } }).response
+          ?.data?.message || 'An error occurred',
       loading: false,
     };
   }

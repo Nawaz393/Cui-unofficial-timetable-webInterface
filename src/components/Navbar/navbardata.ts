@@ -6,14 +6,17 @@ const navbardata: NavbarProps[] = [
     link: '/',
   },
   {
-
-    name:'Features',
-    link:"/features",
+    name: 'Features',
+    link: '/features',
   },
   {
     name: 'About',
     link: '/about',
   },
+  //   {
+  //   name: 'Builder',
+  //   link: '/builder',
+  // },
 ];
 
 export default navbardata;
